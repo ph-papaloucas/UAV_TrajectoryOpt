@@ -2,12 +2,12 @@
 
 Relative paths assume executables are placed in ./build folder
 
-
+```sh
 mkdir build
 cd build
 cmake ..
 cmake --build .
-
+```
 
 
 # Aerodynamic Stability-Derivative Model
