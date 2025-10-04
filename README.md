@@ -15,6 +15,7 @@ cmake --build .
 ## Longitudinal (symmetric) coefficients
 
 Lift coefficient:
+
 $$
 C_L = C_{L0} + C_{L_\alpha}\,\alpha
       + C_{L_q}\,\frac{\bar c\,q}{2V}
@@ -22,6 +23,7 @@ C_L = C_{L0} + C_{L_\alpha}\,\alpha
 $$
 
 Drag coefficient:
+
 $$
 C_D = C_{D0} + C_{D_\alpha}\,\alpha
       + C_{D_q}\,\frac{\bar c\,q}{2V}
@@ -29,6 +31,7 @@ C_D = C_{D0} + C_{D_\alpha}\,\alpha
 $$
 
 Pitching-moment coefficient:
+
 $$
 C_m = C_{m0} + C_{m_\alpha}\,\alpha
       + C_{m_q}\,\frac{\bar c\,q}{2V}
@@ -40,6 +43,7 @@ $$
 ## Lateral/Directional coefficients
 
 Side-force coefficient:
+
 $$
 C_Y = C_{Y0} + C_{Y_\beta}\,\beta
       + C_{Y_p}\,\frac{b\,p}{2V}
@@ -49,6 +53,7 @@ C_Y = C_{Y0} + C_{Y_\beta}\,\beta
 $$
 
 Rolling-moment coefficient:
+
 $$
 C_l = C_{l0} + C_{l_\beta}\,\beta
       + C_{l_p}\,\frac{b\,p}{2V}
@@ -58,6 +63,7 @@ C_l = C_{l0} + C_{l_\beta}\,\beta
 $$
 
 Yawing-moment coefficient:
+
 $$
 C_n = C_{n0} + C_{n_\beta}\,\beta
       + C_{n_p}\,\frac{b\,p}{2V}
@@ -71,11 +77,13 @@ $$
 ## Dimensional Forces & Moments
 
 Dynamic pressure:
+
 $$
 q_\infty = \tfrac{1}{2}\rho V^2
 $$
 
 Forces:
+
 $$
 L = q_\infty S\, C_L,\qquad
 D = q_\infty S\, C_D,\qquad
@@ -83,6 +91,7 @@ Y = q_\infty S\, C_Y
 $$
 
 Moments:
+
 $$
 M = q_\infty S \bar c\, C_m
 $$
