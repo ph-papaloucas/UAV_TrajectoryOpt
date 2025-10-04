@@ -1,0 +1,27 @@
+#pragma once
+
+#include <cmath>
+
+struct State {
+  State(double u, double v, double w, double p, double q, double r)
+      : u(u), v(v), w(w), p(p), q(q), r(r), rho(1.225) {}
+
+  double u, v, w;
+  double p, q, r;
+  double rho;
+
+  // helper methods
+  double airspeed() const { return sqrt(u * u + v * v + w * w); }
+  double alpha() const { return atan2(w, u); }
+  double beta() const { return asin(v / airspeed()); }
+};
+
+
+struct Controls {
+  Controls(double delta_e, double delta_a, double delta_r, double throttle)
+      : delta_e(delta_e), delta_a(delta_a), delta_r(delta_r),
+        throttle(throttle) {}
+
+  double delta_e, delta_a, delta_r;
+  double throttle;
+};

@@ -1,0 +1,50 @@
+mass_model:
+  - mass: 10.0           # Mass [kg] - typical 10kg RC plane
+  - I: [8.5, 12.2, 18.5, 0, 0, 0]  # [Ixx, Iyy, Izz, Ixy, Ixz, Iyz] #kgm² (scaled down from C172)
+
+stability_derivatives: 
+  S: 1.2               # Wing area [m²] - typical for 10kg RC
+  b: 2.8               # Wingspan [m]  
+  c: 0.43              # Mean aerodynamic chord [m]
+
+  # Lift coefficients
+  C_L0: 0.25           # Zero-angle lift coefficient
+  C_L_alpha: 5.2       # Lift curve slope [1/rad] (high for RC airfoils)
+  C_L_q: 6.5           # Pitch damping derivative
+  C_L_delta_e: 0.45    # Elevator effectiveness
+
+  # Drag coefficients
+  C_D0: 0.028          # Zero-lift drag coefficient
+  C_D_alpha: 0.22      # Drag due to angle of attack
+  C_D_q: 0.0           # Drag due to pitch rate (usually negligible)
+  C_D_delta_e: 0.015   # Drag due to elevator
+
+  # Side force coefficients
+  C_Y0: 0.0            # Zero-sideslip side force
+  C_Y_beta: -0.85      # Side force due to sideslip [1/rad]
+  C_Y_p: 0.0           # Side force due to roll rate
+  C_Y_r: 0.0           # Side force due to yaw rate
+  C_Y_delta_a: 0.0     # Side force due to aileron
+  C_Y_delta_r: 0.21    # Side force due to rudder
+
+  # Roll moment coefficients
+  C_l0: 0.0            # Zero-sideslip roll moment
+  C_l_beta: -0.16      # Dihedral effect [1/rad]
+  C_l_p: -0.65         # Roll damping [1/rad]
+  C_l_r: 0.18          # Roll due to yaw rate
+  C_l_delta_a: 0.24    # Aileron effectiveness [1/rad]
+  C_l_delta_r: 0.008   # Rudder roll coupling
+
+  # Pitch moment coefficients
+  C_m0: 0.02           # Zero-angle pitch moment (slightly nose-up)
+  C_m_alpha: -2.4      # Pitch stiffness [1/rad]
+  C_m_q: -25.0         # Pitch damping [1/rad]
+  C_m_delta_e: -1.15   # Elevator effectiveness [1/rad]
+
+  # Yaw moment coefficients
+  C_n0: 0.0            # Zero-sideslip yaw moment
+  C_n_beta: 0.095      # Directional stability [1/rad]
+  C_n_p: -0.045        # Yaw due to roll rate
+  C_n_r: -0.12         # Yaw damping [1/rad]
+  C_n_delta_a: -0.018  # Adverse yaw [1/rad]
+  C_n_delta_r: -0.085  # Rudder effectiveness [1/rad]
